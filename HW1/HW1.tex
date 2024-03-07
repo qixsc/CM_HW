@@ -84,6 +84,11 @@
     \end{enumerate}
 
     \item $f(x) = \dfrac{1}{1-x}$, $P_n(x) = \displaystyle\sum_{k=0}^{n} x^k$.
-    Then, the remainder is $\dfrac{n!}{n! \cdot (1-\xi(x))^{n+1}}x^{n+1}$
+    Then, the remainder is $\dfrac{n!}{n! \cdot (1-\xi(x))^{n+1}}x^{n+1} < x^{n+1}$.
+    Thus, we only need to find the minimun $n$ s.t. $0.5^{n+1} < 10^{-6}$.
+    By taking log both side, $(n+1)(-0.30102999566) < -6\implies n \geq 19$.
+    Thus, $n = 19$.
+
+    \item 
 \end{enumerate}
 \end{document}
