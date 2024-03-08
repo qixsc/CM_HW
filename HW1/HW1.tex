@@ -143,9 +143,11 @@
     The upper bound of surface area is $32 + 38 + 50 = .12e3$, the lower bound of surface area is $17 + 22 + 32 = .71e2$.
 
     \item \begin{enumerate}
-        \item $\sin\left(\dfrac{1}{n^2}\right) = 0 + \dfrac{1}{n^2} - \dfrac{1}{6}\left(\dfrac{1}{n^2}\right)^3 + \cdots = 0 + O(\dfrac{1}{n^2})$.
+        \item $\sin\left(\dfrac{1}{n^2}\right) = 0 + \dfrac{1}{n^2} - \dfrac{1}{6}\left(\dfrac{1}{n^2}\right)^3 + \cdots = 0 + O\left(\dfrac{1}{n^2}\right)$.
 
-        \item $(\sin\left(\dfrac{1}{n}\right))^2$
+        \item $(\sin\left(\dfrac{1}{n}\right))^2 = (0 + O\left(\dfrac{1}{n}\right))^2 = O\left(\dfrac{1}{n^2}\right)$.
+        
+        \item
     \end{enumerate}
 \end{enumerate}
 \end{document}
