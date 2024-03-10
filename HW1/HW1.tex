@@ -84,10 +84,10 @@
     \end{enumerate}
 
     \item $f(x) = \dfrac{1}{1-x}$, $P_n(x) = \displaystyle\sum_{k=0}^{n} x^k$.
-    Then, the remainder is $\dfrac{n!}{n! \cdot (1-\xi(x))^{n+1}}x^{n+1} < x^{n+1}$.
-    Thus, we only need to find the minimun $n$ s.t. $0.5^{n+1} < 10^{-6}$.
-    By taking log both side, $(n+1)(-0.30102999566) < -6\implies n \geq 19$.
-    Thus, $n = 19$.
+    Then, the remainder is $\dfrac{n!}{n! \cdot (1-\xi(x))^{n+1}}x^{n+1} < \dfrac{x^{n+1}}{1-x}$.
+    Thus, we only need to find the minimun $n$ s.t. $\dfrac{0.5^{n+1}}{1-0.5} = 0.5^n < 10^{-6}$.
+    By taking log both side, $n(-0.30102999566) < -6\implies n \geq 20$.
+    Thus, $n = 20$.
 
     \item Since the relative error is $\left|\dfrac{p^*-p}{p}\right| \leq 10^{-4}$, $p - p\times 10^{-4} \leq p^* \leq p + p\times 10^{-4}$.
     \begin{enumerate}
