@@ -41,8 +41,11 @@
     $p_5 = g(p_4) \approx 1.324$ 
     Then, $p_4$ is the answer that we want to find.
 
-    \item Let $a_0 = 1, b_0 = 4$.
-    $f(a_0) = -2$, $f(b_0) = $
-    $f(2.5) = 14.125$
+    \item Let $f(x) = x^3 + x - 4$, $f'(x) = 3x^2 + 1 < 49$ for all $x\in [1, 4]$.
+    Thus, for $|x - y| < \dfrac{10^{-3}}{49} \approx 2.0409e-5$, $|f(x) - f(y)| < 10^3$.
+    Find $n$ s.t. $3 \cdot 2^{-n} < 2.0409e-5$, $n > -\log_2(\dfrac{2.0409e-5}{3}) \approx 17.1653$.
+    Thus, the bound of the number of iteration is $18$.
+
+    Then, 
 \end{enumerate}
 \end{document}
