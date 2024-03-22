@@ -22,6 +22,9 @@
 \usepackage{float}
 \usepackage{fontspec}
 \usepackage{xeCJK}
+\usepackage{graphicx}
+\graphicspath{ {./}}
+
 \setmainfont{Times New Roman}
 \setCJKmainfont{TaipeiSansTCBeta-Regular}
 \XeTeXlinebreaklocale "zh"
@@ -46,6 +49,10 @@
     Find $n$ s.t. $3 \cdot 2^{-n} < 2.0409e-5$, $n > -\log_2(\dfrac{2.0409e-5}{3}) \approx 17.1653$.
     Thus, the bound of the number of iteration is $18$.
 
-    Then, 
+    Then, by python and the code below, the root is about $1.3787$
+
+    \begin{center}
+        \includegraphics{2024-03-22 214359}
+    \end{center}
 \end{enumerate}
 \end{document}
