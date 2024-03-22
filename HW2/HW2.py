@@ -1,5 +1,3 @@
-import os
-
 a = [1]
 b = [4]
 
@@ -9,10 +7,9 @@ def f(x):
 while 1:
     mid = (a[-1] + b[-1])/2
     val = f(mid)
-
     print(mid, val)
 
-    if abs(val) < 0.001:
+    if abs(val) < 0.001/49:
         break
     elif val > 0:
         b.append(mid)
