@@ -9,7 +9,7 @@ while 1:
     val = f(mid)
     print(mid, val)
 
-    if abs(val) < 0.001/49:
+    if abs(val) < 0.0001:
         break
     elif val > 0:
         b.append(mid)
