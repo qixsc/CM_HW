@@ -62,6 +62,7 @@ def problem_4():
         x = g(x)
         step += 1
         print("step:", step, ",value:", x)
+        
 
 
 if __name__ == "__main__":
