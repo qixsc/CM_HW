@@ -32,6 +32,9 @@ def problem_3():
     
     def d(x):
         return math.sqrt(21/x)
+
+    def Alpha(f, x):
+        return math.log(abs((f(x) - p)/(x - p)))
     
     functions = {"a": a, "b": b, "c":c, "d": d}
 
@@ -42,7 +45,7 @@ def problem_3():
             p_now = f(p_now)
             # print(k+1, "err:", abs(p_now - p))
         try:
-            alpha = math.log(abs((f(f(p_now)) - p)/(f(p_now) - p)))/math.log(abs((f(p_now) - p)/(p_now - p)))
+            alpha = Alpha(f, f(p_now))/Alpha(f, p_now)
             print(i, alpha)
         except:
             print(i, "Cannot compute alpha by this method.")
