@@ -40,6 +40,7 @@ def problem_3():
         p_now = 1
         for _ in range(10):
             p_now = f(p_now)
+            print(p_now - p)
         
         alpha = math.log(abs((f(f(p_now)) - p)/(f(p_now) - p)))/math.log(abs((f(p_now) - p)/(p_now - p)))
         print(i, alpha)
