@@ -38,7 +38,7 @@ def problem_3():
     for i in functions.keys():
         f = functions[i]
         p_now = 1
-        for _ in range(100):
+        for _ in range(1):
             p_now = f(p_now)
         
         alpha = math.log(abs((f(f(p_now)) - p)/(f(p_now) - p)))/math.log(abs((f(p_now)-p)/(p_now - p)))
