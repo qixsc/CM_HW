@@ -38,7 +38,7 @@ def problem_3():
     for i in functions.keys():
         f = functions[i]
         p_now = 1
-        for _ in range(5):
+        for _ in range(100):
             p_now = f(p_now)
             # print(p_now - p)
         
