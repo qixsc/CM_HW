@@ -37,7 +37,7 @@ def problem_3():
 
     for i in functions.keys():
         f = functions[i]
-        p_now = 1
+        p_now = 3
         for _ in range(20):
             p_now = f(p_now)
             print("err:", abs(p_now - p))
