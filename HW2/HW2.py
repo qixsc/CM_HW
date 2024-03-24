@@ -38,14 +38,14 @@ def problem_3():
     for i in functions.keys():
         f = functions[i]
         p_now = 1
-        for _ in range(5):
+        for _ in range(20):
             p_now = f(p_now)
             print("err:", abs(p_now - p))
         try:
             alpha = math.log(abs((f(f(p_now)) - p)/(f(p_now) - p)))/math.log(abs((f(p_now) - p)/(p_now - p)))
             print(i, alpha)
         except:
-            print("Cannot compute alpha by this method.")
+            print(i, "Cannot compute alpha by this method.")
 
         print("---")
 
