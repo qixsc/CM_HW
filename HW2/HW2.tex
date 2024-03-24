@@ -52,6 +52,8 @@
     \includegraphics[scale = 0.6]{2024-03-22-214359}
 
     \item In this question, we let $p_{n+1} = g(p_n)$ and $p = \sqrt[3]{21}$.
+    And using the fact that $\dfrac{|p_{n+1}-p|}{|p_n-p|} \approx \dfrac{\lambda |p_n-p|^\alpha}{\lambda |p_{n-1}-p|^\alpha} \approx \left|\dfrac{p_n - p}{p_{n-1}-p}\right|^\alpha$,
+    then $\alpha \approx \dfrac{\ln |(p_{n+1} - p)/(p_n - p)|}{\ln |(p_n-p)/(p_{n-1}-p)|}$
     
     \begin{enumerate}
         \item Suppose $p_n\to p$ linearly. 
@@ -63,7 +65,8 @@
 
         \item $\displaystyle\lim_{n\to\infty} g'(p_n) = 1 - \dfrac{2p^5 - 84p^3 + 21p^2 + 441}{(p^2-21)^2}$
 
-        \item $\displaystyle\lim_{n\to\infty} g'(p_n) = \dfrac{-21\cdot \frac{1}{2}}{p^{3/2}} = -\dfrac{1}{2}$
+        \item $\displaystyle\lim_{n\to\infty} |g'(p_n)| = |\dfrac{-21\cdot \frac{1}{2}}{p^{3/2}}| = \dfrac{1}{2}$.
+        Then, $\displaystyle\lim_{n\to\infty} \dfrac{|g''(p)|}{2} = $
     \end{enumerate}
 \end{enumerate}
 \end{document}
