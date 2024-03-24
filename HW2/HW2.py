@@ -38,9 +38,9 @@ def problem_3():
     for i in functions.keys():
         f = functions[i]
         p_now = 1
-        for k in range(20):
+        for k in range(10):
             p_now = f(p_now)
-            print(k+1, "err:", abs(p_now - p))
+            # print(k+1, "err:", abs(p_now - p))
         try:
             alpha = math.log(abs((f(f(p_now)) - p)/(f(p_now) - p)))/math.log(abs((f(p_now) - p)/(p_now - p)))
             print(i, alpha)
