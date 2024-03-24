@@ -53,20 +53,10 @@
 
     \item In this question, we let $p_{n+1} = g(p_n)$ and $p = \sqrt[3]{21}$.
     And using the fact that $\dfrac{|p_{n+1}-p|}{|p_n-p|} \approx \dfrac{\lambda |p_n-p|^\alpha}{\lambda |p_{n-1}-p|^\alpha} \approx \left|\dfrac{p_n - p}{p_{n-1}-p}\right|^\alpha$,
-    then $\alpha \approx \dfrac{\ln |(p_{n+1} - p)/(p_n - p)|}{\ln |(p_n-p)/(p_{n-1}-p)|}$
+    then $\alpha \approx \dfrac{\ln |(p_{n+1} - p)/(p_n - p)|}{\ln |(p_n-p)/(p_{n-1}-p)|}$.
     
     \begin{enumerate}
-        \item Suppose $p_n\to p$ linearly. 
-        $\displaystyle\lim_{n\to\infty} \dfrac{|p_{n+1} - p|}{|p_n - p|} = \displaystyle\lim_{n\to\infty} g'(p_n) = \displaystyle\lim_{n\to\infty} (\dfrac{20p_n^3 + 21}{21p_n^2})' = \dfrac{20}{21} - \dfrac{2}{p^3} = \dfrac{20}{21} - \dfrac{2}{21} = \dfrac{6}{7}$ is constant.
-        Thus, it truely converges linearly.
-
-        \item $\displaystyle\lim_{n\to\infty} g'(p_n) = 1 - \dfrac{1}{3} - \dfrac{14}{p^3} = \dfrac{2}{3} - \dfrac{2}{3} = 0$.
-        Thus, it converges sublinearly.
-
-        \item $\displaystyle\lim_{n\to\infty} g'(p_n) = 1 - \dfrac{2p^5 - 84p^3 + 21p^2 + 441}{(p^2-21)^2}$
-
-        \item $\displaystyle\lim_{n\to\infty} |g'(p_n)| = |\dfrac{-21\cdot \frac{1}{2}}{p^{3/2}}| = \dfrac{1}{2}$.
-        Then, $\displaystyle\lim_{n\to\infty} \dfrac{|g''(p)|}{2} = $
+        \item 
     \end{enumerate}
 \end{enumerate}
 \end{document}
