@@ -41,7 +41,7 @@ def problem_3():
     for i in functions.keys():
         f = functions[i]
         p_now = 1
-        for k in range(10):
+        for k in range(20):
             p_now = f(p_now)
             # print(k+1, "err:", abs(p_now - p))
         try:
@@ -66,4 +66,4 @@ def problem_4():
 
 
 if __name__ == "__main__":
-    problem_4()
+    problem_3()
