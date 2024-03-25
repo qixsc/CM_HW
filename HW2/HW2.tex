@@ -80,7 +80,15 @@
         \item Let $x_*$ be nonzero fixed point of $g$, $x_* = 2x_* - Ax_*^2 \implies x_* = Ax_*^2\implies x^*A = 1$.
         Thus, $x_* = \dfrac{1}{A}$.
 
-        \item 
+        \item Since $g'(x) = 2 - 2Ax$ and we need $|g'(x)| < k < 1$, \begin{align*}
+            |2-2Ax| < k & \iff -k < 2-2Ax < k\\
+            &\iff \dfrac{k-2}{2A} < x < \dfrac{k+2}{2A}\\
+            &\overset{k=1-\epsilon}{\iff} \dfrac{1}{2A} + \dfrac{\epsilon}{2A} < x < \dfrac{3}{2A} - \dfrac{\epsilon}{2A}
+        \end{align*}
+
+        Thus, $x\in \left( \dfrac{1}{2A} + \dfrac{3}{2A}\right)$.
     \end{enumerate}
+
+    \item 
 \end{enumerate}
 \end{document}
