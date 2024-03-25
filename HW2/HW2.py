@@ -56,7 +56,7 @@ def problem_4():
     def g(x):
         return 2**(-x)
     
-    x = 1
+    x = 0.3334
     step = 0
     while abs(x-g(x)) >= 10**(-4):
         x = g(x)
@@ -64,6 +64,5 @@ def problem_4():
         print("step:", step, ",value:", x)
         
 
-
 if __name__ == "__main__":
-    problem_3()
+    problem_4()
