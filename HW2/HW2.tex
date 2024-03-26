@@ -89,6 +89,20 @@
         Thus, $x\in \left( \dfrac{1}{2A} + \dfrac{3}{2A}\right)$.
     \end{enumerate}
 
-    \item 
+    \item Let $g(x) = \dfrac{x}{2} + \dfrac{A}{2x}$, and $g'(x) = \dfrac{1}{2} - \dfrac{A}{2x^2}$.
+    For $x \in (\sqrt{A}, \infty)$, $|g'(x)| \leq \dfrac{1}{2}$.
+    And since $x > \sqrt{A}$, $\dfrac{x}{2} + \dfrac{A}{2x} - \sqrt{A} = \dfrac{x^2 + A -2Ax}{2x} = \dfrac{(x-\sqrt{A})^2}{2x} > 0$.
+    Thus, if $x>\sqrt{A}$, $g(x) > \sqrt{A}$.
+    By Corollary 2.5, $g(x)$ converges to $\sqrt{A}$ for all $(\sqrt{A}, \infty)$.
+
+    Then, for $x\in (0, \sqrt{A})$, $\dfrac{x}{2}+\dfrac{A}{2x} - \sqrt{A} = \dfrac{(A-x)^2}{2x} > 0$.
+    Thus, for $0 < x < \sqrt{A}$, $g(x) > \sqrt{A}$, and then by the argument above, it will converge to $\sqrt{A}$, too.
+
+    Therefore, for $x_0 > 0$, $x_n$ will converge to $\sqrt{A}$.
+
+    \item \begin{enumerate}
+        \item $p_2 = p_1 - \dfrac{f(p_1)[p_0-p_1]}{f(p_0) - f(p_1)} = \dfrac{-1}{1-\cos(-1)-1} = \dfrac{1}{\cos(1)}\approx 0.999847695$.
+        
+    \end{enumerate}
 \end{enumerate}
 \end{document}
