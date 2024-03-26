@@ -53,10 +53,8 @@ def problem_3():
         print("---")
 
 def problem_4():
-    def g(x):
-        return 2**(-x)
-    
     x = 0.3334
+    g = lambda x : 2**(-x)
     step = 0
     while abs(x-g(x)) >= 10**(-4):
         x = g(x)
@@ -77,7 +75,6 @@ def false_position(f, a_0, b_0, step):
             b.append(s)
         else:
             break
-
 
 def problem_7():
     from math import cos
