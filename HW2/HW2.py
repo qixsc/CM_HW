@@ -66,15 +66,32 @@ def problem_4():
 def secant_method(f, x_1, x_2):
     return x_1 - (f(x_1)*(x_2 - x_1))/(f(x_2) - f(x_1))
 
+def false_position(f, a_0, b_0, step):
+    a, b = [a_0], [b_0]
+    for i in range(step):
+        s = b[-1] - f(b[-1])*(a[-1]-b[-1])/(f(a[-1]) - f(b[-1]))
+        print(f"step{i+2}:", s)
+        if f(a[-1])*s > 0:
+            a.append(s)
+        elif f(a[-1])*s < 0:
+            b.append(s)
+        else:
+            break
+
+
 def problem_7():
     from math import cos
     p = [-1, 0]
     f = lambda x: -x**3 - cos(x)
 
+    print("Secant method: ")
     for i in range(2, 4):
         r = secant_method(f, p[-2], p[-1])
         p.append(r)
         print(f"p_{i}:", r)
+
+    print("False position: ")
+    false_position(f, p[0], p[1], 2)
 
 if __name__ == "__main__":
     problem_7()
