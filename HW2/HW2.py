@@ -63,6 +63,18 @@ def problem_4():
         step += 1
         print("step:", step, ",value:", x)
         
+def secant_method(f, x_1, x_2):
+    return x_1 - (f(x_1)*(x_2 - x_1))/(f(x_2) - f(x_1))
+
+def problem_7():
+    from math import cos
+    p = [-1, 0]
+    f = lambda x: -x**3 - cos(x)
+
+    for i in range(2, 4):
+        r = secant_method(f, p[-2], p[-1])
+        p.append(r)
+        print(f"p_{i}:", r)
 
 if __name__ == "__main__":
-    problem_4()
+    problem_7()
