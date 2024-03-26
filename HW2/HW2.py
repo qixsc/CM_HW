@@ -61,22 +61,22 @@ def problem_4():
         step += 1
         print("step:", step, ",value:", x)
         
-def secant_method(f, x_1, x_2):
-    return x_1 - (f(x_1)*(x_2 - x_1))/(f(x_2) - f(x_1))
-
-def false_position(f, a_0, b_0, step):
-    a, b = [a_0], [b_0]
-    for i in range(step):
-        s = b[-1] - f(b[-1])*(a[-1]-b[-1])/(f(a[-1]) - f(b[-1]))
-        print(f"step{i+2}:", s)
-        if f(a[-1])*s > 0:
-            a.append(s)
-        elif f(a[-1])*s < 0:
-            b.append(s)
-        else:
-            break
-
 def problem_7():
+    def secant_method(f, x_1, x_2):
+        return x_1 - (f(x_1)*(x_2 - x_1))/(f(x_2) - f(x_1))
+
+    def false_position(f, a_0, b_0, step):
+        a, b = [a_0], [b_0]
+        for i in range(step):
+            s = b[-1] - f(b[-1])*(a[-1]-b[-1])/(f(a[-1]) - f(b[-1]))
+            print(f"step{i+2}:", s)
+            if f(a[-1])*s > 0:
+                a.append(s)
+            elif f(a[-1])*s < 0:
+                b.append(s)
+            else:
+                break
+
     from math import cos
     p = [-1, 0]
     f = lambda x: -x**3 - cos(x)
@@ -90,5 +90,16 @@ def problem_7():
     print("False position: ")
     false_position(f, p[0], p[1], 2)
 
+def problem_8():
+    def secant_method(f, x_1, x_2):
+        return x_1 - (f(x_1)*(x_2 - x_1))/(f(x_2) - f(x_1))
+    
+    f = lambda x: 1000*(1-(1+x)**(-360))-135000*x
+    x = [0.002, 0.01]
+    for _ in range(8):
+        p = secant_method(f, x[-1], x[-2])
+        print(p, f(p))
+        x.append(p)
+
 if __name__ == "__main__":
-    problem_7()
+    problem_8()
