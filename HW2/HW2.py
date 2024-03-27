@@ -109,15 +109,17 @@ def problem_10():
             print(f"p_{i}: {p}")
             x.append(f(x[-1]))
 
-    def Steffensens_method(f, x_0, step):
+    def Steffensens_method(f, x_0):
         x = [x_0]
+        step = 0
         while f(x[-1]) >= 10**(-4):
             p_0 = x[-1]
             p_1 = f(p_0)
             p_2 = f(p_1)
             p = p_0 - ((p_1 - p_0)**2)/(p_2 - 2*p_1 + p_0)
-            print(f"i: {i}, p_0: {p_0}, p_1: {p_1}, p_2: {p_2}, p:{p}")
+            print(f"i: {step}, p_0: {p_0}, p_1: {p_1}, p_2: {p_2}, p:{p}")
             x.append(p)
+            step += 1
 
     from math import cos
     f = lambda x: cos(x)
@@ -127,7 +129,7 @@ def problem_10():
     print("Steffensen\'s method: ")
     g = lambda x: x**3 - x - 1
     y_0 = 2
-    Steffensens_method(f, y_0, 5)
+    Steffensens_method(g, y_0)
 
 if __name__ == "__main__":
     problem_10()
