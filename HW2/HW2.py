@@ -102,17 +102,29 @@ def problem_8():
         x.append(p)
 
 def problem_10():
-    def aitkens_method(f, x_0, step):
+    def Aitkens_method(f, x_0, step):
         x = [x_0, f(x_0), f(f(x_0))]
         for i in range(step):
             p = x[-3] - ((x[-2]-x[-3])**2)/(x[-1] - 2*x[-2] + x[-3])
             print(f"p_{i}: {p}")
             x.append(f(x[-1]))
 
+    def Steffensens_method(f, x_0, step):
+        x = [x_0]
+        for i in range(step):
+            p_0 = x[-1]
+            p_1 = f(p_0)
+            p_2 = f(p_1)
+            p = p_0 - ((p_1 - p_0)**2)/(p_2 - 2*p_1 + p_0)
+            print(f"p_{i}: {p}")
+
     from math import cos
     f = lambda x: cos(x)
     x_0 = 0.5
-    aitkens_method(f, x_0, 5)
+    print("Aitken\'s method: ")
+    Aitkens_method(f, x_0, 5)
+    print("Steffensen\'s method: ")
+    Steffensens_method(f, x_0, 5)
 
 if __name__ == "__main__":
     problem_10()
