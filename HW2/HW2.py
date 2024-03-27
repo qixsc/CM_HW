@@ -116,7 +116,7 @@ def problem_10():
             p_1 = f(p_0)
             p_2 = f(p_1)
             p = p_0 - ((p_1 - p_0)**2)/(p_2 - 2*p_1 + p_0)
-            print(f"p_{i}: {p}")
+            print(f"i: {i}, p_0: {p_0}, p_1: {p_1}, p_2: {p_2}, p:{p}")
             x.append(p)
 
     from math import cos
