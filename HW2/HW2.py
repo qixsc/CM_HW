@@ -147,5 +147,40 @@ def problem_11():
     print(f"--- x_0 = {x_0} ---")
     Newtons_method(f, g, x_0)
 
+def problem_11_e():
+    import typing
+    from cmath import sqrt  # Use the complex sqrt as we may generate complex numbers
+
+    Num = typing.Union[float, complex]
+    Func = typing.Callable[[Num], Num]
+
+    def div_diff(f: Func, xs: list[Num]):
+        """Calculate the divided difference f[x0, x1, ...]."""
+        if len(xs) == 2:
+            a, b = xs
+            return (f(a) - f(b)) / (a - b)
+        else:
+            return (div_diff(f, xs[1:]) - div_diff(f, xs[0:-1])) / (xs[-1] - xs[0])
+
+    def mullers_method(f: Func, xs: (Num, Num, Num), iterations: int) -> float:
+        """Return the root calculated using Muller's method."""
+        x0, x1, x2 = xs
+        for _ in range(iterations):
+            w = div_diff(f, (x2, x1)) + div_diff(f, (x2, x0)) - div_diff(f, (x2, x1))
+            s_delta = sqrt(w ** 2 - 4 * f(x2) * div_diff(f, (x2, x1, x0)))
+            denoms = [w + s_delta, w - s_delta]
+            # Take the higher-magnitude denominator
+            x3 = x2 - 2 * f(x2) / max(denoms, key=abs)
+            # Advance
+            x0, x1, x2 = x1, x2, x3
+        return x3
+
+    def f_example(x: Num) -> Num:
+        """The example function. With a more expensive function, memoization of the last 4 points called may be useful."""
+        return x**3 - 5*x**2 + 8*x - 6
+
+    root = mullers_method(f_example, (0, 1, 2), 1)
+    print("Root: {}".format(root))  # Root: (24.738633317099097+0j)
+
 if __name__ == "__main__":
-    problem_11()
+    problem_11_e()
