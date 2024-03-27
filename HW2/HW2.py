@@ -111,7 +111,7 @@ def problem_10():
 
     def Steffensens_method(f, x_0, step):
         x = [x_0]
-        for i in range(step):
+        while f(x[-1]) >= 10**(-4):
             p_0 = x[-1]
             p_1 = f(p_0)
             p_2 = f(p_1)
@@ -125,7 +125,9 @@ def problem_10():
     print("Aitken\'s method: ")
     Aitkens_method(f, x_0, 5)
     print("Steffensen\'s method: ")
-    Steffensens_method(f, x_0, 5)
+    g = lambda x: x**3 - x - 1
+    y_0 = 2
+    Steffensens_method(f, y_0, 5)
 
 if __name__ == "__main__":
     problem_10()
