@@ -8,6 +8,7 @@
 \textwidth 7.2 in
 \textheight  10 in
 \hoffset  0.1in
+\linespread{1.9}
 
 \usepackage{amsthm,amsmath,amssymb,amscd,verbatim,epsfig}
 \usepackage{mathptmx}
@@ -89,6 +90,7 @@
         Thus, $x\in \left( \dfrac{1}{2A} + \dfrac{3}{2A}\right)$.
     \end{enumerate}
 
+    \newpage
     \item Let $g(x) = \dfrac{x}{2} + \dfrac{A}{2x}$, and $g'(x) = \dfrac{1}{2} - \dfrac{A}{2x^2}$.
     For $x \in (\sqrt{A}, \infty)$, $|g'(x)| \leq \dfrac{1}{2}$.
     And since $x > \sqrt{A}$, $\dfrac{x}{2} + \dfrac{A}{2x} - \sqrt{A} = \dfrac{x^2 + A -2Ax}{2x} = \dfrac{(x-\sqrt{A})^2}{2x} > 0$.
@@ -131,7 +133,7 @@
         \item $\ $
 
         \begin{center}
-            \begin{tabular}{|c|c||c|c|}
+            \begin{tabular}[width = 0.8\textwidth]{|c|c||c|c|}
                 \hline
                 i & $p_i$ & j & $\hat{p}_j$\\
                 \hline
@@ -160,6 +162,12 @@
                 \hline
             \end{tabular}
         \end{center}
+
+        The answer above is given by python.
+
+        \includegraphics[scale=0.7]{2024-03-27-171617.png}
     \end{enumerate}
+
+    \item 
 \end{enumerate}
 \end{document}
