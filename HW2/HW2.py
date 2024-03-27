@@ -150,14 +150,14 @@ def problem_11():
 def problem_11_e():
     from cmath import sqrt  
 
-    def diff(f, x):
-        a, b = x
-        return (f(a) - f(b)) / (a - b)
+    def mullers_method(f, x, steps):
+        def delta(f, x):
+            (a, b) = x
+            return (f(a) - f(b)) / (a - b)
 
-    def mullers_method(f, x, iterations: int) -> float:
-        x_0, x_1, x_2 = x
-        for _ in range(iterations):
-            delta_1, delta_2 = diff(f, (x_1, x_0)), diff(f, (x_2, x_1))
+        (x_0, x_1, x_2) = x
+        for _ in range(steps):
+            delta_1, delta_2 = delta(f, (x_1, x_0)), delta(f, (x_2, x_1))
             d = (delta_2 - delta_1)/(x_2-x_0)
             b = delta_2 + (x_2-x_1)*d
             D = sqrt(b**2 - 4*f(x_2)*d)
