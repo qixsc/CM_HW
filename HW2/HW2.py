@@ -117,6 +117,7 @@ def problem_10():
             p_2 = f(p_1)
             p = p_0 - ((p_1 - p_0)**2)/(p_2 - 2*p_1 + p_0)
             print(f"p_{i}: {p}")
+            x.append(p)
 
     from math import cos
     f = lambda x: cos(x)
