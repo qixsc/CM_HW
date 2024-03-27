@@ -143,10 +143,9 @@ def problem_11():
 
     f = lambda x : x**3 - 5*x**2 + 8*x -6
     g = lambda x : 3*x**2 - 10*x + 8
-    x = (2, 4)
-    for x_0 in x:
-        print("--- x_0 = {x_0} ---")
-        Newtons_method(f, g, x_0)
+    x_0 = 4
+    print(f"--- x_0 = {x_0} ---")
+    Newtons_method(f, g, x_0)
 
 if __name__ == "__main__":
     problem_11()
