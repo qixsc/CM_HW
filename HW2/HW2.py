@@ -170,7 +170,7 @@ def problem_11_e():
             x_3 = x_2 - 2 * f(x_2) / E
             # Advance
             x_0, x_1, x_2 = x_1, x_2, x_3
-        return x3
+        return x_3
 
     f = lambda x : x**3 - 5*x**2 + 8*x - 6
     m = mullers_method(f, (0, 1, 2), 1)
