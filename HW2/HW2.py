@@ -121,13 +121,13 @@ def problem_10():
             x.append(p)
             step += 1
 
-    from math import cos
+    from math import cos, sqrt
     f = lambda x: cos(x)
     x_0 = 0.5
     print("Aitken\'s method: ")
     Aitkens_method(f, x_0, 5)
     print("Steffensen\'s method: ")
-    g = lambda x: x**3 - x - 1
+    g = lambda x: sqrt(1 + 1/x)
     y_0 = 2
     Steffensens_method(g, y_0)
 
