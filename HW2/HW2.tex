@@ -220,15 +220,17 @@
         \end{center}
 
         \item $P(x) = (x-3)(x^2 - 2x + 2)=0$. Then, $x = \dfrac{2 \pm 2i}{2}$.
-        \item Let $h_1 = 0-1 = -1$, $h_2 = 1 - 2 = -2$.
-        Then, $\delta_1 = \dfrac{P(0) - P(1)}{h_1} = \dfrac{-6 - (-2)}{-1} = 4$, 
-        $\delta_2 = \dfrac{P(1) - P(2)}{h_2} = \dfrac{-2 - (-2)}{-1} = 0$, 
-        $d = \dfrac{\delta_2 - \delta_1}{h_2 + h_1} = \dfrac{0 - 4}{-2} = 2$.
+        \item Let $h_1 = 1-0 = 1$, $h_2 = 2-1 = 2$.
+        Then, $\delta_1 = \dfrac{P(1) - P(0)}{h_1} = \dfrac{-2 - (-6)}{1} = 4$, 
+        $\delta_2 = \dfrac{P(2) - P(1)}{h_2} = \dfrac{-2 - (-2)}{1} = 0$, 
+        $d = \dfrac{\delta_2 - \delta_1}{h_2 + h_1} = \dfrac{0 - 4}{2} = -2$.
 
-        Thus, $b = 0 + (-2)\cdot 2 = -4$ and $D = \sqrt{(-4)^2 - 4\cdot (-2)\cdot 2} = 4\sqrt{2}$.
-        Since $|b - D| > |b + D|$, $E = -4 - 4\sqrt{2}$.
-        Therefore, $h = \dfrac{-2\cdot (-2)}{-4 - 4\sqrt{2}} = \dfrac{1}{-1-\sqrt{2}} \approx -0.414213562373$,
-        and $p = 2 + h \approx 1.5857864376$
+        Thus, $b = 0 + 1\cdot (-2) = -2$ and $D = \sqrt{(-2)^2 - 4\cdot (-2)\cdot (-2)} = 2\sqrt{3}i$.
+        Since $|b - D| > |b + D|$, $E = -2 - 2\sqrt{3}i$.
+        Therefore, $h = \dfrac{-2\cdot (-2)}{-2 - 2\sqrt{3}i} = \dfrac{2}{-1-\sqrt{3}i} = \dfrac{-1+\sqrt{3}i}{2} \approx -0.5 + 0.866025403784438i$,
+        and $p = 2 + h \approx 1.5 + 0.866025403784438i$.
+
+        \item 
     \end{enumerate}
 \end{enumerate}
 \end{document}

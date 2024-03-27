@@ -148,17 +148,13 @@ def problem_11():
     Newtons_method(f, g, x_0)
 
 def problem_11_e():
-    import typing
     from cmath import sqrt  
 
-    Num = typing.Union[float, complex]
-    Func = typing.Callable[[Num], Num]
-
-    def diff(f: Func, x: list[Num]):
+    def diff(f, x):
         a, b = x
         return (f(a) - f(b)) / (a - b)
 
-    def mullers_method(f: Func, x: (Num, Num, Num), iterations: int) -> float:
+    def mullers_method(f, x, iterations: int) -> float:
         x_0, x_1, x_2 = x
         for _ in range(iterations):
             delta_1, delta_2 = diff(f, (x_1, x_0)), diff(f, (x_2, x_1))
