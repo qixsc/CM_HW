@@ -131,5 +131,15 @@ def problem_10():
     y_0 = 2
     Steffensens_method(g, y_0)
 
+def problem_11():
+    def Newtons_method(f, g, x_0):
+        x = [x_0]
+        step = 0
+        while abs(f(x[-1])) >=  0.00001:
+            p = x[-1] - f(x[-1])/g(x[-1])
+            print(f"{step} & {x[-1]} & {f(x[-1])} & {g(x[-1])} & {p}\\\\")
+            x.append(p)
+            step += 1
+
 if __name__ == "__main__":
-    problem_10()
+    problem_11()
